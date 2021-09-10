@@ -6,11 +6,10 @@
   </h1>
 </div>
 <main>
-  <div class="about">
+  <div class="about" id="about">
     <div>
-      <div class="about-title">
-        <small>ABOUT</small>
-        <h2>自己紹介</h2>
+      <div class="content-title">
+        <h2>ABOUT</h2>
       </div>
       <div class="profile flex-2">
         <div class="profile-img">
@@ -28,86 +27,100 @@
       </div>
     </div>
   </div>
-  <div class="skill">
-    <div class="skill-box">
-      <div class="skill-title">
-        <h1>SKILL</h1>
-      </div>
-      <div class="content">
-        <div class="flex-2">
-          <h3>HTML</h3>
-          <p>★★★★☆</p>
-        </div>
-        <div class="flex-2">
-          <h3>CSS</h3>
-          <p>★★★★☆</p>
-        </div>
-        <div class="flex-2">
-          <h3>JavaScript （Vue.js）</h3>
-          <p>★★★★★</p>
-        </div>
-        <div class="flex-2">
-          <h3>PHP（Laravel）</h3>
-          <p>★★★★★</p>
-        </div>
-        <div class="flex-2">
-          <h3>Word Press</h3>
-          <p>★★★★☆</p>
-        </div>
-      </div>
+  <div class="skill" id="skill">
+    <div class="content-title">
+      <h1>SKILL</h1>
     </div>
-    <div class="flex">
-      <div class="container-top">
-        <div class="new-articles">
-          <h2 class="section-title">NEW ARTICLES!</h2>
-          <div class="flex">
-            <?php if (have_posts()) : ?>
-              <?php while (have_posts()) : the_post(); ?>
-                <a href="<?php the_permalink(); ?>" class="magazine-colum">
-                  <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail(); ?>
-                  <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri() ?>/img/no-images.png" alt="no-img">
-                  <?php endif; ?>
-                  <?php if (!is_category() && has_category()) : ?>
-                    <p class="category-tag">
-                      <?php $postcat = get_the_category();
-                      echo $postcat[0]->name;
-                      ?>
-                    </p>
-                  <?php endif; ?>
-                  <div class="text-content">
-                    <h3 class="srticle__title">
-                      <?php
-                      if (mb_strlen($post->post_title, 'UTF-8') > 30) {
-                        $title = mb_substr($post->post_title, 0, 30, 'UTF-8');
-                        echo $title . '・・・';
-                      } else {
-                        echo $post->post_title;
-                      }
-                      ?>
-                    </h3>
-                    <div class="article-tags">
-                      <p class="article-tags__inner">
-                        <?php $posttags = get_the_tags();
-                        if ($posttags) {
-                          foreach ($posttags as $tag) {
-                            echo '<span class="tag>' . $tag->name . '</span>';
-                          }
-                        } ?>
-                      </p>
-                    </div>
-                    <p class="article__date"><?php echo get_the_date('Y-m-d'); ?></p>
-                  </div>
-                </a>
-              <?php endwhile; ?>
-            <?php else : ?>
-              <p>投稿が見つかりません。</p>
-            <?php endif; ?>
+    <div class="skill-box flex-2">
+      <div class="skill-card flex-2">
+        <div class="skill-icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/img2/HTML.png">
+        </div>
+        <div class="skill-desc">
+          <h3>HTML</h3>
+          <div class="rating">
+            ★★★★☆
           </div>
         </div>
       </div>
-      <?php get_sidebar(); ?>
+      <div class="skill-card flex-2">
+        <div class="skill-icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/img2/CSS.png">
+        </div>
+        <div class="skill-desc">
+          <h3>CSS</h3>
+          <div class="rating">
+            ★★★★☆
+          </div>
+        </div>
+      </div>
+      <div class="skill-card flex-2">
+        <div class="skill-icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/img2/js-icon.png">
+        </div>
+        <div class="skill-desc">
+          <h3>Vue.js /JavaScript</h3>
+          <div class="rating">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+      <div class="skill-card flex-2">
+        <div class="skill-icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/img2/PHP.png">
+        </div>
+        <div class="skill-desc">
+          <h3>Laravel/PHP</h3>
+          <div class="rating">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+      <div class="skill-card flex-2">
+        <div class="skill-icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/img2/Netlify.png">
+        </div>
+        <div class="skill-desc">
+          <h3>Netlify</h3>
+          <div class="rating">
+            ★★★☆☆
+          </div>
+        </div>
+      </div>
+      <div class="skill-card flex-2">
+        <div class="skill-icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/img2/Heroku.png">
+        </div>
+        <div class="skill-desc">
+          <h3>Heroku</h3>
+          <div class="rating">
+            ★★★☆☆
+          </div>
+        </div>
+      </div>
+      <div class="skill-card flex-2">
+        <div class="skill-icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/img2/SQL.png">
+        </div>
+        <div class="skill-desc">
+          <h3>DB（MySQL）</h3>
+          <div class="rating">
+            ★★★★☆
+          </div>
+        </div>
+      </div>
+      <div class="skill-card flex-2">
+        <div class="skill-icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/img2/wp-icon.png">
+        </div>
+        <div class="skill-desc">
+          <h3>Word Press</h3>
+          <div class="">
+            ★★★★☆
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </main>
 <?php get_footer(); ?>
