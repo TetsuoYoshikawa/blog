@@ -114,10 +114,32 @@
           <img src="<?php echo get_template_directory_uri(); ?>/img2/wp-icon.png">
         </div>
         <div class="skill-desc">
-          <h3>Word Press</h3>
+          <h3>WordPress</h3>
           <div class="">
             ★★★★☆
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio" id="portfolio">
+    <div class="content-title">
+      <h1>Portfolio</h1>
+    </div> 　　　　　　
+    <div class="portfolio-card">
+      <div href="" class="magazine-colum">
+        <img src="<?php echo get_template_directory_uri(); ?>/img2/rese.png">
+        <p class="portfolio-tag">
+          飲食店予約サイト
+        </p>
+        <div class="portfolio-tags">
+          <p class="portfolio-tags__inner">
+            フロントエンド:HTML,CSS,JavaScript（Vue.js）
+            <br>
+            バックエンド:PHP（Laravel）
+            <br>
+            作成期間:2カ月
+          </p>
         </div>
       </div>
     </div>
