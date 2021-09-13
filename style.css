@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+flex
 /*
 Theme Name:wp-theme
 Theme URL: テーマのサイトのURL
@@ -41,7 +41,6 @@ img {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: stretch;
-  margin-bottom: 40px;
 }
 .flex-2 {
   display: flex;
@@ -118,8 +117,9 @@ small {
 }
 .about {
   width: 100%;
+  margin: 100px 0 150px 0;
 }
-.about-title {
+.content-title {
   text-align: center;
   font-size: 50px;
   line-height: 50px;
@@ -173,33 +173,33 @@ small {
   width: 42%;
 }
 
-.category-tag {
-  text-align: center;
-  background: #000;
-  padding: 5px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  color: #fff;
-  font-size: 14px;
-  min-width: 100px;
+.skill {
+  margin: 100px auto;
+  width: 70%;
 }
-
-.article-cat {
-  width: 30%;
+.skill-box {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px;
+  margin-left: 0%;
+  background-color: white;
 }
-
-.article__date,
-.article-tags__inner {
-  font-size: 12px;
-  margin-bottom: 5px;
+.skill-card {
+  display: flex;
+  flex-basis: 48%;
+  margin: 20px 0;
+  font-size: 20px;
+  border-bottom: 1px solid #999;
 }
-.article-tags {
-  text-align: right;
+.skill-icon img {
+  height: 60px;
+  width: 60px;
 }
-
-.article-tags__inner {
-  display: inline-block;
+.skill-desc {
+  margin: 0 20px;
+}
+.skill-text {
+  font-size: 15px;
 }
 
 /*------------------------*/
@@ -223,14 +223,47 @@ small {
   margin-top: 0;
   margin-left: 0;
 }
+.portfolio-card {
+  background-color: white;
+}
+
+.portfolio-tag {
+  text-align: center;
+  background: #000;
+  opacity: 0.6;
+  padding: 5px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #fff;
+  font-size: 14px;
+  min-width: 100px;
+}
+
+.article-cat {
+  width: 30%;
+}
+
+.portfolio__date,
+.portfolio-tags__inner {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.portfolio-tags__inner {
+  display: inline-block;
+}
 
 /*------------------------*/
 /*         contact        */
 /*------------------------*/
-
+.single-eyecatch {
+  font-size: 50px;
+  text-align: center;
+  line-height: 40px;
+  padding-top: 30px;
+}
 .contact {
-  padding: 50px 0;
-  /* max-width: 900px; */
   margin: 0 20px;
 }
 
@@ -285,7 +318,9 @@ textarea {
 /*------------------------*/
 /*         footer         */
 /*------------------------*/
-
+footer {
+  background-color: #333;
+}
 #footer small {
   height: 80px;
   text-align: center;
@@ -306,7 +341,8 @@ textarea {
 }
 
 .footer-sns {
-  margin-bottom: 20px;
+  padding-top: 20px;
+  margin: 20px;
 }
 
 .footer-content h3 {
@@ -315,7 +351,11 @@ textarea {
 }
 
 .sns-icon {
-  margin-left: 20px;
+  margin: 0 50px;
+}
+
+.fab {
+  color: white;
 }
 
 .sns-icon.first {
@@ -325,7 +365,9 @@ textarea {
 .footer-content ul li {
   line-height: 1.5;
 }
-
+.footer-about a {
+  color: #fff;
+}
 .footer-about li {
   display: inline-block;
   margin-left: 30px;
@@ -337,84 +379,12 @@ textarea {
 
 #footer small {
   font-size: 12px;
+  color: #666;
 }
 
 .footer-nav__title {
   text-align: center;
   margin: 45px 0;
-}
-
-/* カテゴリーサイドバー  */
-
-.widget_categories ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-.widget_categories .cat-item {
-  display: block;
-  padding: 4px 4px 4px 20px;
-  margin: 1px;
-  color: #000;
-  font-weight: bolder;
-  transition: 0.5s;
-  position: relative;
-  border-bottom: 1px solid #fafafa;
-}
-
-.widget_categories .cat-item :hover {
-  border-bottom: 1px solid #707070;
-}
-
-.widget_categories .cat-item::before {
-  position: absolute;
-  top: 3px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  content: ">";
-}
-
-/* サイドバーの人気記事一覧レイアウト */
-ul.wpp-list li {
-  counter-increment: wpp-count;
-  position: relative;
-}
-ul.wpp-list li:before {
-  display: block;
-  padding: 1px 11px;
-  color: #fff;
-  background-color: #333;
-  content: counter(wpp-count);
-  position: absolute;
-  opacity: 1;
-  z-index: 10000;
-  border-radius: 6px;
-  top: 6px;
-  left: 6px;
-}
-ul.wpp-list li:last-child {
-  border-bottom: none;
-}
-ul.wpp-list li:nth-child(1):before {
-  background-color: #fbcc54;
-}
-ul.wpp-list li:nth-child(2):before {
-  background-color: #b7bfc1;
-}
-ul.wpp-list li:nth-child(3):before {
-  background-color: #d47b16;
-}
-ul.wpp-list li img {
-  margin: 5px 10px 5px 5px;
-  padding: 3px;
-  width: 100px;
-}
-ul.wpp-list li a.wpp-post-title {
-  display: block;
-  font-size: 15px;
-  padding: 12px;
-  text-decoration: none;
-  color: #333;
 }
 
 @media screen and (max-width: 960px) {
@@ -502,7 +472,6 @@ ul.wpp-list li a.wpp-post-title {
 
   .eyecatch {
     padding: 0;
-    margin-bottom: 40px;
   }
 
   .single-category-tag {
@@ -529,4 +498,6 @@ ul.wpp-list li a.wpp-post-title {
     font-size: 25px;
     line-height: 1.2;
   }
+}
+
 }
