@@ -125,22 +125,76 @@
   <div class="portfolio" id="portfolio">
     <div class="content-title">
       <h1>Portfolio</h1>
-    </div> 　　　　　　
-    <div class="portfolio-card">
-      <div href="" class="magazine-colum">
-        <img src="<?php echo get_template_directory_uri(); ?>/img2/rese.png">
-        <p class="portfolio-tag">
-          飲食店予約サイト
-        </p>
-        <div class="portfolio-tags">
-          <p class="portfolio-tags__inner">
-            フロントエンド:HTML,CSS,JavaScript（Vue.js）
-            <br>
-            バックエンド:PHP（Laravel）
-            <br>
-            作成期間:2カ月
+    </div>
+    <div class="flex-2">
+      <div class="portfolio-card">
+        <a href="https://rese-site.netlify.app/" class="portfolio-colum">
+          <img src="<?php echo get_template_directory_uri(); ?>/img2/rese.png">
+          <p class="portfolio-tag">
+            飲食店予約サイト
           </p>
-        </div>
+          <div class="portfolio-tags">
+            <p class="portfolio-tags__inner">
+              フロントエンド:HTML,CSS,JavaScript（Vue.js）
+              <br>
+              バックエンド:PHP（Laravel）
+              <br>
+              作成期間:2カ月
+              <br>
+              <a>github:</a>
+              <a class="github" href="https://github.com/TetsuoYoshikawa/Rese">フロントエンド</a>
+              <br>
+              github:
+              <a class="github" href="https://github.com/TetsuoYoshikawa/Rese-api">バックエンド</a>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="portfolio-card">
+        <a href="https://rese-site.netlify.app/" class="portfolio-colum">
+          <img src="<?php echo get_template_directory_uri(); ?>/img2/rese.png">
+          <p class="portfolio-tag">
+            飲食店予約サイト
+          </p>
+          <div class="portfolio-tags">
+            <p class="portfolio-tags__inner">
+              フロントエンド:HTML,CSS,JavaScript（Vue.js）
+              <br>
+              バックエンド:PHP（Laravel）
+              <br>
+              作成期間:2カ月
+              <br>
+              <a>github:</a>
+              <a class="github" href="https://github.com/TetsuoYoshikawa/Rese">フロントエンド</a>
+              <br>
+              github:
+              <a class="github" href="https://github.com/TetsuoYoshikawa/Rese-api">バックエンド</a>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="portfolio-card">
+        <a href="https://rese-site.netlify.app/" class="portfolio-colum">
+          <img src="<?php echo get_template_directory_uri(); ?>/img2/rese.png">
+          <p class="portfolio-tag">
+            飲食店予約サイト
+          </p>
+          <div class="portfolio-tags">
+            <p class="portfolio-tags__inner">
+              フロントエンド:HTML,CSS,JavaScript（Vue.js）
+              <br>
+              バックエンド:PHP（Laravel）
+              <br>
+              作成期間:2カ月
+              <br>
+              <a>github:</a>
+              <a class="github" href="https://github.com/TetsuoYoshikawa/Rese">フロントエンド</a>
+              <br>
+              github:
+              <a class="github" href="https://github.com/TetsuoYoshikawa/Rese-api">バックエンド</a>
+            </p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
